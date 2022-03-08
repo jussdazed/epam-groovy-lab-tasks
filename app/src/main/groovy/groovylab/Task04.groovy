@@ -6,8 +6,11 @@ Task04.fib(4) == 3
 
 package groovylab
 
-class Task04 {
+class Task04{
     public static int fib(int n) {
-        throw UnsupportedOperationException('Not Implemented!')
+        switch (n) {
+        case 1..2: 1; break
+        default: n = fib(n-1) + fib(n-2); break }
     }
 }
+

@@ -8,6 +8,6 @@ package groovylab
 
 class TaskCalculator {
     public static Number exec(String expression) {
-        throw UnsupportedOperationException('Not Implemented!')
+        return Eval.me(expression.replaceAll(/(\d+)\(/,'$1*('))
     }
 }
